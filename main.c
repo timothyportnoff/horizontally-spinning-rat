@@ -1,8 +1,9 @@
-#include <wiringPi.h>
+#include "/WiringPi/wiringPi/wiringPi.h"
 #include <stdio.h>
 
 #define LedPin 0
 #define BLUE 28
+#define TICK 512
 
 int main(void) {
         if(wiringPiSetup() == -1) { //when initialize wiringPi failed, print message to screen
@@ -13,11 +14,12 @@ int main(void) {
         pinMode(LedPin, OUTPUT);
         while(1) {
                 digitalWrite(LedPin, LOW);   //led on
+                digitalWrite(LedPin, LOW);   //led on
                 printf("led on\n");
-                delay(1000);			     // wait 1 sec
+                delay(TICK);	
                 digitalWrite(LedPin, HIGH);  //led off
                 printf("led off\n");
-                delay(1000);                 // wait 1 sec
+                delay(TICK); 
         }
         return 0;
 }
