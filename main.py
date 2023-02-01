@@ -21,7 +21,7 @@ GPIO.setup(YELLOW, GPIO.OUT)
 GPIO.setup(BLUE, GPIO.OUT)
 GPIO.setup(RED, GPIO.IN)
 GPIO.setup(GREEN, GPIO.IN)
-#GPIO.setup(26, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
+#GPIO.setup(26, GPIO.IN, pull_up_down=GPIO.PUD_DOWN) # TODO set in as off when initializing
 GPIO.setup(26, GPIO.IN)
 
 #main function
@@ -31,10 +31,10 @@ if __name__ =="__main__":
 
     #Do constant button press checking
     while True:
-        if GPIO.input(26) == GPIO.HIGH:
+        if button_is_pressed(STOP BUTTON) GPIO.input(26) == GPIO.HIGH:
             print("button pressed!")
             led_on(YELLOW)
-        sleep(0.1)
+        else sleep(0.5) # Sleep for half a second? FIXME
 
     #Exit cleanly
     GPIO.cleanup()
