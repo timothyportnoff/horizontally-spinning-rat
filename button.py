@@ -1,7 +1,4 @@
-
-def check_button(PIN):
+def button_is_pressed(PIN):
     print("Checking button")
-    if GPIO.input(PIN) == GPIO.HIGH:
-        print("button pressed!")
-    sleep(1)
-
+    if GPIO.input(PIN) == GPIO.HIGH return true
+    else return false
