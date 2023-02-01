@@ -1,2 +1,2 @@
-def motor_hello():
-    print("Hello world!")
+def run_motor():
+    print("Hello world! This function is supposed to run the motor.")
