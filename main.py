@@ -9,7 +9,7 @@ from time import sleep
 #CONSTANTS
 POTENTIOMMETER = 0
 START_BUTTON = 26
-STOP_BUTTON = 0
+STOP_BUTTON = 26
 BUZZER = 0
 MOTOR = 0
 YELLOW = 17
@@ -24,27 +24,24 @@ def setup():
     GPIO.setup(BLUE, GPIO.OUT)
     GPIO.setup(RED, GPIO.IN)
     GPIO.setup(GREEN, GPIO.IN)
-
-#GPIO.setup(26, GPIO.IN, pull_up_down=GPIO.PUD_DOWN) # TODO set in as off when initializing
-GPIO.setup(26, GPIO.IN)
+    #GPIO.setup(26, GPIO.IN, pull_up_down=GPIO.PUD_DOWN) # TODO set in as off when initializing
+    GPIO.setup(26, GPIO.IN)
 
 #main function
 if __name__ =="__main__":
     #Welcome, and setup
     print("Welcome to horizontally spinning rat")
+    print("Press the button to begin.")
     setup()
 
     #Do constant button press checking
     while True:
-        if button_is_pressed(START_BUTTON) GPIO.input(START_BUTTON) == GPIO.HIGH:
-            print("button pressed!")
+        if button_is_pressed(START_BUTTON): #GPIO.input(START_BUTTON) == GPIO.HIGH:
+            print("start button pressed!")
             led_on(YELLOW)
-        else if button_is_pressed(STOP_BUTTON) # Sleep for half a second? FIXME
-        else sleep(0.5) # Sleep for half a second? FIXME
+        elif button_is_pressed(STOP_BUTTON): # Sleep for half a second? FIXME
+            print("stop button pressed!")
+        else: sleep(0.9) # Sleep for a second? FIXME
 
     #Exit cleanly
     GPIO.cleanup()
-
-
-
-
