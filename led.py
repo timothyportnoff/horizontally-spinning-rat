@@ -1,3 +1,5 @@
+import RPi.GPIO as GPIO
+
 def led_on(PIN):
     GPIO.output(PIN, GPIO.HIGH)
 
