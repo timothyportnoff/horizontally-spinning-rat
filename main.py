@@ -38,7 +38,7 @@ if __name__ =="__main__":
     while True:
         if button_is_pressed(START_BUTTON): #GPIO.input(START_BUTTON) == GPIO.HIGH:
             print("start button pressed!")
-            led_on(YELLOW)
+            #led_on(YELLOW)
         elif button_is_pressed(STOP_BUTTON): # Sleep for half a second? FIXME
             print("stop button pressed!")
         else: sleep(0.9) # Sleep for a second? FIXME
