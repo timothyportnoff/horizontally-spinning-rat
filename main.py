@@ -55,7 +55,8 @@ if __name__ =="__main__":
             print("start button pressed!")
         #elif button_is_pressed(STOP_BUTTON): # Sleep for half a second? FIXME
             #print("stop button pressed!")
-        else: sleep(1) #Sleep for a second? FIXME
+        #else: 
+        sleep(1) #Sleep for a second? FIXME
 
     #Exit cleanly
     GPIO.cleanup()
