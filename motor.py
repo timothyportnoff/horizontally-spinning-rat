@@ -1,8 +1,5 @@
 #import RPi.GPIO as GPIO
 
-def run_motor():
-    print("Hello world! This function is supposed to run the motor.")
-
 #these three lines should already be in main, but not sure if they still need to be in motor.py
 #Import RPi.GPIO as GPIO
 #From time import sleep    

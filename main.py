@@ -25,7 +25,7 @@ def setup():
 
     #tim TODO
     #GPIO.setup(START_BUTTON, GPIO.IN, pull_up_down=GPIO.PUD_DOWN) # set in as off when initializing
-    GPIO.setup(26, GPIO.IN)
+    #GPIO.setup(26, GPIO.IN)
 
     #mora TODO
     #
